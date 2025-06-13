@@ -11,7 +11,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("https://ds-b-prova-1.onrender.com/api/person");
+      const res = await axios.get("https://ds-b-prova.onrender.com/api/person");
       setList(res.data);
       console.log(res.data); 
     } catch (error) {
@@ -21,7 +21,7 @@ function App() {
 
   const registerUser = async () => {
     try { 
-      await axios.post("https://ds-b-prova-1.onrender.com/api/person",{
+      await axios.post("https://ds-b-prova.onrender.com/api/person",{
         name, lastname, salary
       });
     } catch (error) {
@@ -31,7 +31,7 @@ function App() {
 
   const deleteUser = async (id) => {
     try { 
-      await axios.delete(`https://ds-b-prova-1.onrender.com/api/person/${id}`);
+      await axios.delete(`https://ds-b-prova.onrender.com/api/person/${id}`);
       getUsers()
     } catch (error) {
       console.error("Erro ao inserir", error);
